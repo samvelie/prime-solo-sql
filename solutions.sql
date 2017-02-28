@@ -14,7 +14,6 @@ SELECT * FROM "syntax_practice" WHERE "transactions_attempted" >= '9';
 SELECT "username", "account_balance" FROM "syntax_practice" ORDER BY "account_balance" DESC LIMIT 3;
 
 /* 6. Get the username and account balance of the 3 users with the lowest balances, sort lowest to highest balance. */
-
 SELECT "username", "account_balance" FROM "syntax_practice" ORDER BY "account_balance" ASC LIMIT 3;
 
 /* 7. Get all users with account balances that are more than $100. */
@@ -25,5 +24,6 @@ INSERT INTO "syntax_practice" ("username", "city", "transactions_completed", "tr
 VALUES ('billy', 'peoria', 13, 14, 123);
 
 /* 9. The bank is losing money in Miami and Phoenix and needs to unload low transaction customers: Delete users that reside in miami OR phoenix and have completed fewer than 5 transactions. */
-DELETE FROM "syntax_practice" WHERE "transactions_completed" < '5'
+DELETE FROM "syntax_practice" 
+WHERE "transactions_completed" < '5'
 AND ("city" = 'miami' OR "city" = 'phoenix');
